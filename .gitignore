@@ -1,0 +1,15 @@
+.gradle
+/build/
+libs
+/target/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+/out/
+/target/
+/logs/*
+*.log
+target/
