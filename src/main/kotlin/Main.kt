@@ -12,7 +12,7 @@ fun main() {
 }
 
 fun setupConsul(){
-    val client = Consul.builder().withHostAndPort(HostAndPort.fromParts("192.168.22.128", 8500)).build()
+    val client = Consul.builder().withHostAndPort(HostAndPort.fromParts("localhost", 8500)).build()
     val kvClient = client.keyValueClient()
 
     val cache = KVCache.newCache(kvClient, "config/application/",60)
@@ -23,7 +23,7 @@ fun setupConsul(){
 
         newValue.ifPresent { value ->
             val decodedValue = newValue.get().valueAsString
-            decodedValue.ifPresent { v -> println(String.format("Value is: %s", v)) } //prints "bar"
+            decodedValue.ifPresent { v -> println(String.format("Value is: %s", v)) }
             consulValue = decodedValue.get()
         }
     }

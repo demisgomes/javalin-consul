@@ -14,6 +14,7 @@ dependencies {
     // https://mvnrepository.com/artifact/io.javalin/javalin
     compile group: 'io.javalin', name: 'javalin', version: '3.5.0'
     compile 'com.orbitz.consul:consul-client:1.3.6'
+    compile "org.slf4j:slf4j-simple:1.7.26"
 }
 
 compileKotlin {
